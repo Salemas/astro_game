@@ -15,8 +15,18 @@ def main():
     clock = pygame.time.Clock()
     running = True
 
-#player init
+    #creating groups
+    updatables = pygame.sprite.Group()
+    drawables = pygame.sprite.Group()
+
+    #adding player to groups
+    Player.containers = (updatables, drawables)
+
+
+    #     #player init
     player = Player(x = SCREEN_WIDTH / 2, y = SCREEN_HEIGHT / 2)
+
+
 
 
     while running:
@@ -33,8 +43,11 @@ def main():
 
         # RENDER YOUR GAME HERE
 
-        player.update(dt)
-        player.draw(screen)
+        for updatable in updatables:
+            updatable.update(dt)
+
+        for drawable in drawables:
+            drawable.draw(screen)
 
 
 
