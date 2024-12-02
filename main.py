@@ -53,6 +53,11 @@ def main():
         for drawable in drawables:
             drawable.draw(screen)
 
+    # colision detection asteroids with player
+        for asteroid in asteroids:
+            if asteroid.collision(player):
+                print("GAME OVER!!! MUAHA HA HA")
+                running = False
 
 
         # flip() the display to put your work on screen
