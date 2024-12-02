@@ -18,6 +18,10 @@ class Player(CircleShape):
         c = self.position - forward * self.radius + right
         return [a, b, c]
 
+    #player shoot
+    def shooting(self):
+        pass
+
     #rotation player
     def rotate(self, dt):
         self.rotation = self.rotation + PLAYER_TURN_SPEED * dt
