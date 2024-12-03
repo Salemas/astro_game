@@ -19,8 +19,8 @@ class Player(CircleShape):
         return [a, b, c]
 
     #player shoot
-    def shooting(self):
-        pass
+    def shooting(self, dt):
+        print('BUM BUM BUM')
 
     #rotation player
     def rotate(self, dt):
@@ -48,4 +48,4 @@ class Player(CircleShape):
         if keys[pygame.K_s]:
             self.move(-dt)
         if keys[pygame.K_SPACE]:
-            print('BUM BUM BUM')
+            self.shooting(dt)
