@@ -22,7 +22,8 @@ class Player(CircleShape):
     #player shoot
     def shooting(self):
         shot = Shot(self.position.x, self.position.y, SHOT_RADIUS)
-        velocity = pygame.Vector2(0, 1).rotate(self.rotation)
+        velocity = pygame.Vector2(0, 1) * PLAYER_SHOOT_SPEED
+        velocity = velocity.rotate(self.rotation)
         shot.velocity = velocity 
 
     #rotation player

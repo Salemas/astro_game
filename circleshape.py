@@ -14,10 +14,10 @@ class CircleShape(pygame.sprite.Sprite):
         self.radius = radius
 
     def draw(self, screen):
-        pass
+        pygame.draw.circle(screen, 'white', self.position , self.radius, width=2)
 
     def update(self, dt):
-        pass
+        self.position += self.velocity * dt
 
     def collision(self, object):
 
