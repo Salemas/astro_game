@@ -1,6 +1,6 @@
 import pygame
 from constants import *
-from circleshape import CircleShape
+#from circleshape import CircleShape
 from player import Player
 from asteroid import Asteroid
 from asteroidsfield import AsteroidField
@@ -27,12 +27,12 @@ def main():
     Player.containers = (updatables, drawables)
     Asteroid.containers = (asteroids, updatables, drawables)
     AsteroidField.containers = (updatables)
-    Shot.containers =(shots)
+    Shot.containers =(shots, updatables, drawables)
 
     #     object init 
     player = Player(x = SCREEN_WIDTH / 2, y = SCREEN_HEIGHT / 2)
     asteroidfield = AsteroidField()
-
+   
 
 
     while running:
