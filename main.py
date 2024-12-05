@@ -60,6 +60,10 @@ def main():
             if asteroid.collision(player):
                 print("GAME OVER!!! MUAHA HA HA")
                 running = False
+            for shot in shots:
+                if asteroid.collision(shot):
+                    asteroid.kill()
+                    shot.kill()
 
 
         # flip() the display to put your work on screen
